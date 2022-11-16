@@ -52,6 +52,7 @@
 
   <build>
     <plugins>
+      <!-- enable surfire plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -61,11 +62,14 @@
           <argLine>${surefireArgLine}</argLine>
         </configuration>
       </plugin>
+
+      <!-- enable site plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <version>4.0.0-M3</version>
       </plugin>
+
       <!-- enable integration test -->
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -85,6 +89,7 @@
           </executions>
       </plugin>
 
+      <!-- enable jacoco -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -163,16 +168,24 @@
         </executions>
       </plugin>
 
+      <!-- enable bugspots -->
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>4.7.3.0</version>
+      </plugin>
 
     </plugins>
   </build>
   <reporting>
     <plugins>
+      <!-- enable surfire report plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
         <version>${surfire.version}</version>
       </plugin>
+
     </plugins>
   </reporting>
 </project>
