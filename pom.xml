@@ -16,8 +16,18 @@
 
   <packaging>pom</packaging>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+    </dependency>
+  </dependencies>
   <modules>
     <module>jpa-entities</module>
+    <module>UserCommand</module>
+    <module>thirdmodule</module>
+
   </modules>
 
 </project>
