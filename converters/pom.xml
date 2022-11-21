@@ -10,7 +10,6 @@
 
     <artifactId>converters</artifactId>
     <properties>
-        <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
     </properties>
     <packaging>jar</packaging>
 
@@ -18,7 +17,6 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>${org.mapstruct.version}</version>
         </dependency>
         <dependency>
             <groupId>com.mw</groupId>

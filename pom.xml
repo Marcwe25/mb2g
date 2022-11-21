@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -13,16 +13,51 @@
     <java.version>8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
+    <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
+    <org.hibernate.version>5.6.14.Final</org.hibernate.version>
+    <org.projectlombok.version>1.18.24</org.projectlombok.version>
+    <jaxb.version>2.3.0</jaxb.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${org.mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${org.hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>${jaxb.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.xml.bind</groupId>
+        <artifactId>jaxb-core</artifactId>
+        <version>${jaxb.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.xml.bind</groupId>
+        <artifactId>jaxb-impl</artifactId>
+        <version>${jaxb.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${org.projectlombok.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <packaging>pom</packaging>
 
   <dependencies>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.24</version>
-    </dependency>
+
     <dependency>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>flatten-maven-plugin</artifactId>
@@ -38,13 +73,14 @@
     <module>web-app</module>
   </modules>
 
-  <build>
 
+
+  <build>
   <plugins>
     <plugin>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>flatten-maven-plugin</artifactId>
-      <!--<version>1.3.0</version>-->
+      <version>1.3.0</version>
       <configuration>
         <flattenMode>bom</flattenMode>
       </configuration>
