@@ -9,6 +9,6 @@ public interface UserMap {
 
     UserMap mapper = Mappers.getMapper(UserMap.class);
 
-    @Mapping(source = "email", target = "email")
-    UserModel userToUserDTO(User user);
+    //@Mapping(source = "email", target = "email")
+    //UserModel userToUserDTO(User user);
 }
