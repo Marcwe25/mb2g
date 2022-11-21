@@ -26,8 +26,8 @@
   <modules>
     <module>jpa-entities</module>
     <module>web-api</module>
-    <module>web-app</module>
     <module>converters</module>
+    <module>web-app</module>
   </modules>
 
 </project>

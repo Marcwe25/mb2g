@@ -1,5 +1,7 @@
 package com.mw;
 
+import com.mw.entties.User;
+import jaxb.gen.UserModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -7,8 +9,9 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface UserMap {
 
-    UserMap mapper = Mappers.getMapper(UserMap.class);
+    UserMap INSTANCE = Mappers.getMapper(UserMap.class);
 
-    //@Mapping(source = "email", target = "email")
-    //UserModel userToUserDTO(User user);
+    UserModel userToUserModel(User user);
+
+    User userModelToUser(UserModel user);
 }

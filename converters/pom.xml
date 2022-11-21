@@ -22,10 +22,17 @@
         </dependency>
         <dependency>
             <groupId>com.mw</groupId>
-            <artifactId>web-app</artifactId>
+            <artifactId>web-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-    </dependencies>  <build>
+        <dependency>
+            <groupId>com.mw</groupId>
+            <artifactId>jpa-entities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <build>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
