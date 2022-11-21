@@ -25,9 +25,9 @@
   </dependencies>
   <modules>
     <module>jpa-entities</module>
-    <module>UserCommand</module>
-    <module>thirdmodule</module>
-
+    <module>web-app</module>
+    <module>web-api</module>
+    <module>converters</module>
   </modules>
 
 </project>

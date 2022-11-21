@@ -1,6 +1,5 @@
-package com.mw.entties;
+package com.mw;
 
-import jaxb.gen.UserModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
