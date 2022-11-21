@@ -4,11 +4,12 @@
   <parent>
     <groupId>com.mw</groupId>
     <artifactId>mmodule</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
   </parent>
 
   <packaging>jar</packaging>
   <artifactId>jpa-entities</artifactId>
+
   <dependencies>
     <dependency>
       <groupId>org.hibernate</groupId>
